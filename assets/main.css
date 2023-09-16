@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+
+html {
+
+}
+
+body{
+    background-color: #102B47;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+p, h1 {
+    margin: 0;
+}
+
+
+.container {
+    padding: 5.6rem;
+    display: "flex";
+    flex-direction: "column";
+    gap: 0.2rem;
+}
+
+.landing{
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintitle{
+    color: #ECE7E2;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 48px;
+    font-style: normal;
+    /* font-weight: 700; */
+    line-height: normal;
+}
+
+.about{
+    color: #D69362;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.allrectangles {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.rectangle {
+    width: 300px;
+    height: 380px;
+    /* flex-shrink: 0; */
+    border-radius: 28px;
+    background: linear-gradient(0deg, #979797 0%, #979797 100%);
+    /* margin-left: 91px; */
+    position: relative;
+}
+
+.entryrectangles {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.rectangle:hover {
+    scale: 1.1;
+    transition: all 200ms ease-in-out;
+}
+
+
+.border {
+    height: 90px;
+    width: 300px;
+    border-radius: 0px 0px 28px 28px;
+    background-color: #90BEC5;
+    bottom: 0;
+    position: absolute;
+}
+
+.image-container {
+    width: 2555px;
+    height: 1864px;
+    background-image: url("./Seraphim\ Shores\ Map.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.title-container {
+    position: absolute;
+    left: 164px;
+    top: 106px;
+}
+
+
+.map-title {
+    color: #3E342A;
+    font-family: Quicksand;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+
+
+.map-main-title {
+    color: #102B47;
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    font-family: Luxurious Script;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 400;
+    transform: translate(0, -17%);
+}
+
+.image-container > p 
+{
+    color: #F5F5F5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Luxurious Script;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    transition: all 200ms ease-in-out;
+}
+
+.image-container > p:hover
+{
+    scale: 1.3;
+    transition: all 200ms ease-in-out;
+    cursor: url("./bubble\ cursor.png");
+}
+
