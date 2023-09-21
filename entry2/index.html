@@ -18,18 +18,55 @@
             width: 100vw;
             overflow: hidden;
             object-fit: cover;
+            position: relative; /* Position relative for absolute positioning of text */
+        }
+
+        .title-container {
+            position: absolute;
+            left: 100px;
+            top: 75px;
+            opacity: 0; /* Initially, set opacity to 0 to make it invisible */
+            transition: opacity 1s; /* Add a transition effect */
+        }
+
+        .title-parent {
+            position: relative;
+        }
+
+        /* Add styles for your text elements here */
+        .map-title {
+            font-size: clamp(2rem, 3vw, 4rem);
+            color: #303836;
+        }
+
+        .map-main-title {
+            font-size: clamp(8rem, 10vw, 15rem);
+            color: #303836;
         }
     </style>
 </head>
 <body>
     <div id="video-container">
+        <div class="title-container">
+            <p class="map-title">welcome to the</p>
+            <h1 class="map-main-title">Mermaid Lagoon</h1>
+        </div>
         <video id="myVideo" autoplay>
             <source src="../assets/mermaidLagoon1.mp4" type="video/mp4">
         </video>
+        <a href="../entry1/index.html" style="position: absolute; bottom:5%; right:10%;">
+            <div class="explore-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#D69362" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <h3>KEEP EXPLORING</h3>
+            </div>
+        </a>
     </div>
     <script>
         // Get the video element
         var vid = document.getElementById("myVideo");
+
+        // Get the title container element
+        var titleContainer = document.querySelector(".title-container");
 
         // Detect if the video is playing
         var isPlaying = false;
@@ -44,6 +81,9 @@
                     e.preventDefault();
                     e.stopPropagation();
                 });
+
+                // Fade in the title container by setting opacity to 1
+                titleContainer.style.opacity = 1;
 
                 isPlaying = true;
             }
