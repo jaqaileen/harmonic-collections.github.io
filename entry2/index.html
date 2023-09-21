@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../assets/main.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        #video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            overflow: hidden;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="myVideo" autoplay>
+            <source src="../assets/mermaidLagoon1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        // Get the video element
+        var vid = document.getElementById("myVideo");
+
+        // Detect if the video is playing
+        var isPlaying = false;
+
+        // Add an event listener for the video
+        vid.addEventListener('click', function() {
+            // If the video is not playing, start the animation
+            if (!isPlaying) {
+                vid.play();
+                // Disable pausing the video
+                vid.addEventListener('pause', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+
+                isPlaying = true;
+            }
+        });
+    </script>
+</body>
+</html>
