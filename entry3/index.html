@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Changer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('coral-reef-bck.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image-container {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="random-image" src="pinkfish.png" alt="Random Image">
+    </div>
+
+    <script>
+        const images = [
+            'pinkfish.png',
+            'pinkgreenfish.png',
+            'bluefish.png',
+            'bwfish.png',
+            'greenfish.png',
+            'primaryfish.png',
+            'redfish.png',
+            'purpleyellowfish.png'
+        ];
+
+        const imageContainer = document.getElementById('image-container');
+        const randomImage = document.getElementById('random-image');
+
+        imageContainer.addEventListener('click', () => {
+            // Get a random index to select a random image from the array
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImageUrl = images[randomIndex];
+            
+            // Update the source of the random image
+            randomImage.src = randomImageUrl;
+        });
+    </script>
+</body>
+</html>
