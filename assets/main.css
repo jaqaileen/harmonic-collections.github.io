@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
 
-html {
-
-}
-
-body{
+body {
     background-color: #102B47;
     margin: 0;
     font-family: 'Quicksand', sans-serif;

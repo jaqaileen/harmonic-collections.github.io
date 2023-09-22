@@ -8,8 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('coral-reef-bck.jpg'); /* Background image */
-            background-size: cover;
+            background-image: url('../assets/coral-reef-bck.jpg'); 
             background-position: center;
             font-family: Arial, sans-serif;
             height: 100vh;
@@ -21,23 +20,29 @@
         #image-container {
             cursor: pointer;
         }
+
+        #random-image {
+            width: 692px;
+            height: 576px;
+        }
+
     </style>
 </head>
 <body>
     <div id="image-container">
-        <img id="random-image" src="pinkfish.png" alt="Random Image">
+        <img id="random-image" src="../assets/pinkfish.png" alt="Random Image">
     </div>
 
     <script>
         const images = [
-            'pinkfish.png',
-            'pinkgreenfish.png',
-            'bluefish.png',
-            'bwfish.png',
-            'greenfish.png',
-            'primaryfish.png',
-            'redfish.png',
-            'purpleyellowfish.png'
+            '../assets/pinkfish.png',
+            '../assets/pinkgreenfish.png',
+            '../assets/bluefish.png',
+            '../assets/bwfish.png',
+            '../assets/greenfish.png',
+            '../assets/primaryfish.png',
+            '../assets/redfish.png',
+            '../assets/purpleyellowfish.png'
         ];
 
         const imageContainer = document.getElementById('image-container');
