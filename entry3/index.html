@@ -24,14 +24,49 @@
         #random-image {
             width: 692px;
             height: 576px;
+            object-fit: cover; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; 
+            opacity: 0.90;
         }
+
+        #overlay-image {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            pointer-events: none;
+        }
+        
+        /* #click-me-text {
+            width: 195.977px;
+            height: 104.043px;
+            transform: rotate(10.25deg);
+            position: absolute;
+            top: 250px; 
+            left: 960px;
+            background-color: ##F5F5F5
+            text-align: center;
+            line-height: 104.043px; 
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 3; 
+            <div id="click-me-text">click me!</div>/ */
 
     </style>
 </head>
 <body>
+    <img id="overlay-image" src="../assets/corals.png" alt="Overlay Image">
     <div id="image-container">
         <img id="random-image" src="../assets/pinkfish.png" alt="Random Image">
     </div>
+    
 
     <script>
         const images = [
@@ -49,11 +84,9 @@
         const randomImage = document.getElementById('random-image');
 
         imageContainer.addEventListener('click', () => {
-            // Get a random index to select a random image from the array
             const randomIndex = Math.floor(Math.random() * images.length);
             const randomImageUrl = images[randomIndex];
             
-            // Update the source of the random image
             randomImage.src = randomImageUrl;
         });
     </script>
