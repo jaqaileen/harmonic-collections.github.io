@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="../assets/main.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            overflow-x: hidden; /* Hide horizontal scrollbar */
+            overflow-x: hidden; 
         }
 
         #video-container {
@@ -18,22 +17,21 @@
             width: 100vw;
             overflow: hidden;
             object-fit: cover;
-            position: relative; /* Position relative for absolute positioning of text */
+            position: relative; 
         }
 
         .title-container {
             position: absolute;
             left: 100px;
             top: 75px;
-            opacity: 0; /* Initially, set opacity to 0 to make it invisible */
-            transition: opacity 1s; /* Add a transition effect */
+            opacity: 0; 
+            transition: opacity 1s; 
         }
 
         .title-parent {
             position: relative;
         }
 
-        /* Add styles for your text elements here */
         .map-title {
             font-size: clamp(2rem, 3vw, 4rem);
             color: #303836;
@@ -56,33 +54,27 @@
         </video>
         <a href="../entry1/index.html" style="position: absolute; bottom:5%; right:10%;">
             <div class="explore-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#D69362" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 <h3>KEEP EXPLORING</h3>
             </div>
         </a>
     </div>
     <script>
-        // Get the video element
         var vid = document.getElementById("myVideo");
 
-        // Get the title container element
         var titleContainer = document.querySelector(".title-container");
 
-        // Detect if the video is playing
         var isPlaying = false;
 
-        // Add an event listener for the video
         vid.addEventListener('click', function() {
-            // If the video is not playing, start the animation
+
             if (!isPlaying) {
                 vid.play();
-                // Disable pausing the video
                 vid.addEventListener('pause', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                 });
 
-                // Fade in the title container by setting opacity to 1
                 titleContainer.style.opacity = 1;
 
                 isPlaying = true;
