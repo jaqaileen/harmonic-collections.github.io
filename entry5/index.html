@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemstone Grotto Background</title>
+    <link href="../assets/main.css" rel="stylesheet"> 
     <style>
         body {
             background-image: url('../assets/gemstonegrotto.jpg');
@@ -19,6 +20,7 @@
             flex-shrink: 0;
             border-radius: 12px;
             background: rgba(61, 89, 76, 0.70);
+            z-index: 1; 
             position: absolute;
             left: 90px;
             bottom: 90px;
@@ -34,18 +36,29 @@
             font-weight: 600;
             line-height: normal;
             position: absolute;
-            left: 253px;
-            bottom: 113px;
-            padding: 10px;
+            left: 167px;
+            bottom: 2px;
+            z-index: 100; 
+        }
+
+         .pinkgem {
+            width: 33px;
+            height: 49px;
+            position: absolute;
+            top: 500px;
+            right: 891px;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="custom-box">
         <div class="custom-box-text">
-            For the full image, drag the screen to find the gemstones.
+            find the gemstones.
         </div>
-    </div>       
-</body>
-</html>
 
+        <img class=pinkgem src= "../assets/pinkgem.png">
+    </body>
+</html>
 
