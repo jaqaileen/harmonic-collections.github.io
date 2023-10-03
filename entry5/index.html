@@ -3,62 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemstone Grotto Background</title>
-    <link href="../assets/main.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="../assets/main.css">
+    <title>Y-Parallax with Arrow Keys</title>
     <style>
-        body {
-            background-image: url('../assets/gemstonegrotto.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
-
-       
-        .custom-box {
-            width: 419px;
-            height: 165px;
-            flex-shrink: 0;
-            border-radius: 12px;
-            background: rgba(61, 89, 76, 0.70);
-            z-index: 1; 
-            position: absolute;
-            left: 90px;
-            bottom: 90px;
-        }
-
-        .custom-box-text {
-            width: 231px;
-            height: 119px;
-            color: #CFE4E7;
-            font-family: Quicksand;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            position: absolute;
-            left: 167px;
-            bottom: 2px;
-            z-index: 100; 
-        }
-
-         .pinkgem {
-            width: 33px;
-            height: 49px;
-            position: absolute;
-            top: 420px;
-            right: 891px;
-        }
-
     </style>
 </head>
-
 <body>
-    <div class="custom-box">
-        <div class="custom-box-text">
-            find the gemstones.
+    <div class="parallax-container">
+        <div class="parallax-bg">
+            <img src="../assets/piratesgraveyard.jpg" alt="bg">
         </div>
-
-        <img class=pinkgem src= "../assets/pinkgem.png">
-    </body>
+        <div class="content">
+            <!-- Your content goes here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
-
