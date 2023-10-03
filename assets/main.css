@@ -226,6 +226,9 @@ a {
     font-style: normal;
     font-weight: 400;
     transform: translate(0, -17%);
+    position: absolute
+    bottom: 20px;
+    right: 22px;
 }
 
 .image-container > a 
@@ -280,12 +283,6 @@ a {
     overflow: auto;
     padding: 20px;
     box-sizing: border-box;
-}
-
-body {
-    background-image: url('../assets/gemstonegrotto.jpg');
-    background-size: cover;
-    margin: 0;
 }
 
 .game-container {
