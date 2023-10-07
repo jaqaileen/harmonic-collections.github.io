@@ -1,141 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="../assets/main.css" rel="stylesheet"> 
-  <title>harmonic collections: exploring the deep sea</title>
-  
- <!-- Inspired by my favorite childhood movies by Studio Ghibli or movies such as Fantasia, The Little Mermaid, Peter Pan, and The Sea Prince And The Fire Child, I wanted my Harmonic Collection to evoke a sense of nostalgia intertwined with the allure of fantasy. Additionally, I drew inspiration from the whimsical and imaginative artworks of Aya Takano, who artfully maintains a childlike perspective in her unique creations. My Harmonic Collection will be titled 'Exploring The Deep Sea,' as it encapsulates its enchanting essence set in an ethereal underwater realm.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
 
-Within this collection, my focal point resides within the mesmerizing marine environment and its captivating creatures. Every entry will have a vibrant and luminous color palette, artfully melding reality with fantasy. Each entry within this compendium is a distinct voyage into this magical domain, offering viewers an ever-shifting kaleidoscope of experiences. Some entries will delve into the intricacies of the marine ecosystem, others shall capture the resplendent beauty and enchantment that permeates this mystical world, and others will unravel the enigmatic tales of the creatures that call this sea their home.
-    -->
+    #video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+    #theVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    #circle-svg {
+        position: absolute;
+        top: 450px;
+        left: 570px;
+        display: none;
+        overflow: hidden;
+        z-index: 10000;
+        transition: all 0.3s;
+        border-radius: 100px;
+        border: 2px solid #F5F5F5;
+        width: 34px;
+        height: 34px;
+}
+
+    #circle-svg:hover {
+        width: 146px;
+        height: 34px; 
+        border-radius: 100px;
+        border: 2px solid #F5F5F5;
+}
+
+    .text {
+        position: absolute;
+        top: 50%; 
+        left: 40px; 
+        transform: translateY(-50%);
+        color: #F5F5F5;
+        font-family: Quicksand;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        z-index: 1001; 
+        opacity: 0;
+        pointer-events: none; 
+        white-space: nowrap;
+}
+
+    #circle-svg:hover .text {
+    opacity: 1; 
+}
+
+    #path-svg {
+        position: absolute;
+        top: 460px;
+        left: 578px;
+        display: none;
+        z-index: 10000;
+    }
+
+    </style>
+    <link rel="stylesheet" href="../assets/main.css">
 </head>
-
 <body>
-<div class="container">
-    <div class="landing-container">
-        <div class="landing"> 
-            <h1 class="maintitle">harmonic collections: <br> exploring the deep sea</h1> 
+    <div id="video-container">
+        <div class="title-container">
         </div>
-        <div class="about-section"> 
-            <h2 class="about">about the collection</h2> 
-                <h3 class="about" style="font-weight:300;">My Harmonic Collection is a journey into a magical underwater world, inspired by childhood classics. It is an intersection between creativity and imagination. </h3>
-        </div>
-    </div>
-    <div style="padding:5.6rem; display:flex; flex-direction: column; gap: 1.8rem; margin-top:5rem;"> 
-        <h2 style="color:white;">let's dive deeper</h2> 
-        <div class="entry-list">
-            <div class="entry-section">
-                <div class="entry-image-container">
-                    <a href="../entry1/index.html">
-                        <img src="../assets/SeraphimShoresMap.jpg" alt="entry1" class="entry-image">
-                    </a>
-                    </div>
-                <div class="entry-body">
-                    <a href="../entry1/index.html">
-                        <div class="entry-title">
-                            <sub class="entry-name">ENTRY 1</sub>
-                            <h1>Seraphim Shores</h1>
-                        </div>
-                    </a>
-                    <a href="../entry1/index.html">
-                        <div class="explore-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#89CCAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                            <h3>START EXPLORING</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="entry-section" style="flex-direction: row-reverse;">
-                <div class="entry-image-container">
-                    <a href="../entry2/index.html">
-                        <img src="../assets/mermaidLagoonThumbnail.jpg" alt="entry1" class="entry-image">
-                    </a>
-                    </div>
-                <div class="entry-body" style="align-items: flex-start;">
-                    <a href="../entry2/index.html">
-                        <div class="entry-title">
-                            <sub class="entry-name">ENTRY 2</sub>
-                            <h1>Mermaid Lagoon</h1>
-                        </div>
-                    </a>
-                    <a href="../entry2/index.html">
-                        <div class="explore-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#89CCAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                            <h3>START EXPLORING</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="entry-section"> 
-            <div class="entry-image-container">
-                <a href="./entry3/index.html">
-                    <img src="../assets/coral-reef-bck.jpg" alt="entry3" class="entry-image">
-                </a>
-                </div>
-            <div class="entry-body" style="align-items: flex-start;">
-                <a href="../entry3/index.html">
-                    <div class="entry-title">
-                        <sub class="entry-name">ENTRY 3</sub>
-                        <h1>Coral Cove</h1>
-                    </div>
-                </a>
-                <a href="../entry3/index.html">
-                    <div class="explore-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#89CCAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        <h3>START EXPLORING</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="entry-section" style="flex-direction: row-reverse;">
-            <div class="entry-image-container">
-                <a href="../entry4/index.html">
-                    <img src="../assets/gemstonegrotto.jpg" alt="entry4" class="entry-image">
-                </a>
-                </div>
-            <div class="entry-body" style="align-items: flex-start;">
-                <a href="../entry4/index.html">
-                    <div class="entry-title">
-                        <sub class="entry-name">ENTRY 4</sub>
-                        <h1>Gemstone Grotto</h1>
-                    </div>
-                </a>
-                <a href="../entry4/index.html">
-                    <div class="explore-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#89CCAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        <h3>START EXPLORING</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="entry-section"> 
-            <div class="entry-image-container">
-                <a href="./entry5/index.html">
-                    <img src="../assets/piratesgraveyard.jpg" alt="entry5" class="entry-image">
-                </a>
-                </div>
-            <div class="entry-body" style="align-items: flex-start;">
-                <a href="../entry5/index.html">
-                    <div class="entry-title">
-                        <sub class="entry-name">ENTRY 5</sub>
-                        <h1>Pirate's Graveyard</h1>
-                    </div>
-                </a>
-                <a href="../entry5/index.html">
-                    <div class="explore-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#89CCAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        <h3>START EXPLORING</h3>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> 
-    
+        <video id="theVideo" autoplay muted> 
+            <source src="../assets/shipwreckhome.mp4" type="video/mp4">
+        </video>
 
-</body>
-</html>
+        <a href="./interiorship.html">
+        <div class="svg-container" id="circle-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <circle cx="17" cy="17" r="16" stroke="#F5F5F5" stroke-width="3"/>
+            </svg>
+            <div class="text">
+                <p>enter ship</p>
+            </div>
+        </div>
+        
+        <div class="svg-container" id="path-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
+                <path d="M8.14917 16.6238L8.21345 16.5596L8.14917 16.6238C8.2341 16.7088 8.33493 16.7761 8.4459 16.8221C8.55686 16.868 8.6758 16.8917 8.7959 16.8917C8.91601 16.8917 9.03494 16.868 9.1459 16.8221C9.25687 16.7761 9.35769 16.7087 9.44261 16.6238C9.52754 16.5389 9.5949 16.438 9.64086 16.3271C9.68682 16.2161 9.71047 16.0972 9.71047 15.9771C9.71046 15.8569 9.6868 15.738 9.64083 15.6271C9.59486 15.5161 9.52749 15.4153 9.44256 15.3303L3.6726 9.56043H19.3854C19.628 9.56042 19.8606 9.46406 20.0321 9.29254C20.2036 9.12103 20.3 8.88841 20.3 8.64585C20.3 8.40329 20.2036 8.17067 20.0321 7.99915C19.8606 7.82764 19.628 7.73128 19.3854 7.73126H3.6726L9.44256 1.96135C9.61409 1.78984 9.71045 1.55721 9.71047 1.31464C9.71048 1.07207 9.61413 0.839437 9.44261 0.667909C9.2711 0.49638 9.03847 0.400011 8.7959 0.4C8.55334 0.399989 8.3207 0.496339 8.14917 0.667852L8.14917 0.667855L0.817925 7.9991C0.732991 8.08403 0.665616 8.18486 0.61965 8.29583C0.573683 8.4068 0.550024 8.52573 0.550024 8.64585C0.550024 8.76596 0.573683 8.8849 0.61965 8.99587C0.665616 9.10684 0.732991 9.20766 0.817924 9.29259L8.14917 16.6238Z" fill="#F5F5F5" stroke="#F5F5F5" stroke-width="0.7"/>
+            </svg>
+        </div>
+        </a>
+    </div>
+    </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const circleSvg = document.getElementById('circle-svg');
+            circleSvg.addEventListener('mouseover', function () {
+                const originalSvg = circleSvg.querySelector('svg');
+                if (originalSvg) {
+                    originalSvg.remove();
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('theVideo');
+            const svgContainers = document.querySelectorAll('.svg-container');
+
+    video.addEventListener('ended', function () {
+        console.log(svgContainers);
+        svgContainers.forEach(function (container) {
+            container.style.display = 'block';
+        });
+    });
+});
+    </script>
