@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; 
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .svg-element {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    opacity: 0%;
+    z-index: 2; 
+    }
+
+    .svg1 {
+    top: 238px; 
+    left: 562px;
+    }
+
+    .svg2 {
+    top: 340px;
+    right: 210px; 
+    }
+    
+    .svg3 {
+    top: 135px;
+    right: 378px; 
+    }
+
+    .svg4 {
+    top: 154px;
+    left: 273px; 
+    }
+
+    .svg5 {
+    top: 370px;
+    left: 127px; 
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <video autoplay loop controls>
+                <source src="../assets/bookvid.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <a href="../entry1/index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="181" height="181" viewBox="0 0 181 181" fill="none" class="svg-element svg1">
+            <circle cx="90.5" cy="90.5" r="90.5" fill="#D9D9D9"/>
+        </svg>
+        </a>
+
+        <a href="../entry2/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="181" height="181" viewBox="0 0 181 181" fill="none" class="svg-element svg2">
+                <circle cx="90.5" cy="90.5" r="90.5" fill="#D9D9D9"/>
+            </svg>
+            </a>
+
+        <a href="../entry3/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="181" height="181" viewBox="0 0 181 181" fill="none" class="svg-element svg3">
+                <circle cx="90.5" cy="90.5" r="90.5" fill="#D9D9D9"/>
+            </svg>
+            </a>
+
+        <a href="../entry4/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="181" height="181" viewBox="0 0 181 181" fill="none" class="svg-element svg4">
+                <circle cx="90.5" cy="90.5" r="90.5" fill="#D9D9D9"/>
+            </svg>
+            </a>    
+
+        <a href="../entry5/index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="181" height="181" viewBox="0 0 181 181" fill="none" class="svg-element svg5">
+                <circle cx="90.5" cy="90.5" r="90.5" fill="#D9D9D9"/>
+            </svg>
+            </a>   
+    </div>
+
+    <script>
+        const video = document.getElementById("myVideo");
+
+    function playVideo() {
+    video.play().catch(function(error) {
+        // Autoplay was prevented, handle it here
+        console.error("Autoplay prevented:", error);
+    });
+}
+
+    window.addEventListener("load", playVideo);
+    playButton.addEventListener("click", playVideo);
+    </script>
+</body>
+</html>

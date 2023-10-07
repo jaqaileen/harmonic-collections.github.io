@@ -29,6 +29,69 @@ a {
     color: inherit;
 }
 
+/* home 2 */
+.svg-container {
+    position: absolute;
+    bottom: 405px; 
+    left: 479px; 
+    z-index: 10000;
+}
+
+
+.shipwreckhome {
+    margin: 0;
+    padding: 0;
+    background-image: url('./shipwreckhome.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #F5F5F5;
+}
+
+.home-title {
+    font-family: 'Luxurious Script', cursive;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.home-subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* home 1 */
+
 .image-home {
     width: 100vw;
     height: 100vh;
@@ -203,8 +266,8 @@ a {
 
 .title-container {
     position: absolute;
-    left: 164px;
-    top: 106px;
+    right: 90px;
+    bottom: 5px;
 }
 
 
@@ -219,16 +282,14 @@ a {
 
 
 .map-main-title {
-    color: #102B47;
+    color: #F5F5F5;
     text-shadow: 0px 6px 6px rgba(245, 245, 245, 0.47);
     font-family: Luxurious Script;
+    opacity: 35%;
     font-size: 120px;
     font-style: normal;
     font-weight: 400;
     transform: translate(0, -17%);
-    position: absolute
-    bottom: 20px;
-    right: 22px;
 }
 
 .image-container > a 
@@ -285,6 +346,8 @@ a {
     box-sizing: border-box;
 }
 
+/* entry 4 */
+
 .game-container {
     position: relative;
     width: 100%;
@@ -295,6 +358,8 @@ a {
 
 .game-box {
     position: relative;
+    bottom: 90px;
+    left: 90px;
     flex: 1;
 }
 
@@ -303,9 +368,20 @@ a {
 }
 
 .instruction-box {
-    width: 30%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
+    width: 530px;
+    height: 200px;
+    border-radius: 12px;
+    background: rgba(61, 89, 76, 0.70);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    position: absolute;
+    bottom: 40px; 
+    left: 40px; 
+}
+
+.instruction-box h3 {
+    color: #f5f5f5;
+    position: absolute;
+    bottom: 110px; 
+    left: 40px; 
 }
