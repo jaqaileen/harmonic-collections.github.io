@@ -91,7 +91,6 @@ a {
 }
 
 /* home 1 */
-
 .image-home {
     width: 100vw;
     height: 100vh;
@@ -257,7 +256,6 @@ a {
 }
 
 /* entry 4 */
-
 .game-container {
     position: relative;
     width: 100%;
@@ -268,8 +266,6 @@ a {
 
 .game-box {
     position: relative;
-    bottom: 90px;
-    left: 90px;
     flex: 1;
 }
 
