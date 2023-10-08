@@ -1,15 +1,13 @@
 
-// Define the images to be found
 const imagesToFind = [
-    { src: "../assets/bluegem.png", top: '531px', left: '616px' },
-    { src: "../assets/browngem.png", top: '480px', left: '605px' },
-    { src: "../assets/greengem.png", top: '300px', left: '50px' },
-    { src: "../assets/lightgreengem.png", top: '310px', left: '626px' },
-    { src: "../assets/lightpinkgem.png", top: '285px', left: '776px' },
-    { src: "../assets/pinkgem.png", top: '351px', left: '898px' },
-    { src: "../assets/redgem.png", top: '590px', left: '985px' },
-    { src: "../assets/whitegem.png", top: '380px', left: '1300px' },
-    { src: "../assets/yellowgem.png", top: '574px', left: '946px' },
+    { src: "../assets/bluegem.png", top: '510px', left: '580px' },
+    { src: "../assets/browngem.png", top: '570px', left: '522px' },
+    { src: "../assets/lightgreengem.png", top: '400px', left: '536px' },
+    { src: "../assets/lightpinkgem.png", top: '371px', left: '687px' },
+    { src: "../assets/pinkgem.png", top: '437px', left: '810px' },
+    { src: "../assets/redgem.png", top: '670px', left: '885px' },
+    { src: "../assets/whitegem.png", top: '450px', left: '1202px' },
+    { src: "../assets/yellowgem.png", top: '550px', left: '890px' },
     
 ];
 
