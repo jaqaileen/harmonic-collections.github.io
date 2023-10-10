@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/main.css">
-    <title>Y-Parallax with Arrow Keys</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
+
+        #sky-svg {
+            position: fixed;
+            top: 100px;
+            left: 200px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 100px;
+            width: 27px;
+            height: 27px;
+            z-index: 1000;
+    }
+
+        #ocean-svg {
+            position: fixed;
+            top: 270px;
+            left: 530px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 100px;
+            width: 27px;
+            height: 27px;
+            z-index: 1000;
+    }
+
+         #boat-svg {
+            position: fixed;
+            top: 200px;
+            left: 1070px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 100px;
+            width: 27px;
+            height: 27px;
+            z-index: 1000;
+        }
+            
+        #siren-svg {
+            position: fixed;
+            bottom: 400px;
+            left: 1000px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border-radius: 100px;
+            z-index: 1000;
+    }
+
+
+
     </style>
 </head>
 <body>
@@ -19,9 +67,92 @@
             <img src="../assets/piratesgraveyard.jpg" alt="bg">
         </div>
         <div class="content">
-            <!-- Your content goes here -->
         </div>
     </div>
+
+    <div class="svg-container" id="sky-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
+          </svg>
+          <audio id="skyaudio" src="../assets/seagulls.mp3"></audio>  
+    </div>
+
+    <div class="svg-container" id="ocean-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
+          </svg>
+          <audio id="wavesaudio" src="../assets/waves.mp3"></audio>  
+    </div>
+
+    <div class="svg-container" id="boat-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
+          </svg>
+          <audio id="boataudio" src="../assets/boat.mp3"></audio>  
+    </div>
+
+    <div class="svg-container" id="siren-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+            <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
+          </svg>
+          <audio id="sirenaudio" src="../assets/siren.mp3"></audio>  
+    </div>
+
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const skySvg = document.getElementById('sky-svg');
+          const skyAudio = document.getElementById('skyaudio');
+      
+          skySvg.addEventListener('click', () => {
+            if (skyAudio.paused) {
+              skyAudio.play();
+            } else {
+              skyAudio.pause();
+            }
+          });
+        });
+      
+        document.addEventListener('DOMContentLoaded', function() {
+          const oceanSvg = document.getElementById('ocean-svg');
+          const oceanAudio = document.getElementById('wavesaudio');
+      
+          oceanSvg.addEventListener('click', () => {
+            if (oceanAudio.paused) {
+              oceanAudio.play();
+            } else {
+              oceanAudio.pause();
+            }
+          });
+        });
+      
+        document.addEventListener('DOMContentLoaded', function() {
+          const boatSvg = document.getElementById('boat-svg');
+          const boatAudio = document.getElementById('boataudio');
+      
+          boatSvg.addEventListener('click', () => {
+            if (boatAudio.paused) {
+              boatAudio.play();
+            } else {
+              boatAudio.pause();
+            }
+          });
+        });
+      
+        document.addEventListener('DOMContentLoaded', function() {
+          const sirenSvg = document.getElementById('siren-svg');
+          const sirenAudio = document.getElementById('sirenaudio');
+      
+          sirenSvg.addEventListener('click', () => {
+            if (sirenAudio.paused) {
+              sirenAudio.play();
+            } else {
+              sirenAudio.pause();
+            }
+          });
+        });
+      </script>
+      
 </body>
 </html>
