@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/main.css">
     <style>
-        body, html {
+    body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
 
+        .container {
+            width: 150vw;
+            height: 150vh;
+            background-image: url("../assets/piratesgraveyard.jpg");
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
         #sky-svg {
-            position: fixed;
-            top: 100px;
+            position: absolute;
+            top: 45px;
             left: 200px;
             overflow: hidden;
             transition: all 0.3s;
@@ -21,11 +26,11 @@
             width: 27px;
             height: 27px;
             z-index: 1000;
-    }
+        }
 
         #ocean-svg {
-            position: fixed;
-            top: 270px;
+            position: absolute;
+            top: 280px;
             left: 530px;
             overflow: hidden;
             transition: all 0.3s;
@@ -33,12 +38,12 @@
             width: 27px;
             height: 27px;
             z-index: 1000;
-    }
+        }
 
-         #boat-svg {
-            position: fixed;
-            top: 200px;
-            left: 1070px;
+        #boat-svg {
+            position: absolute;
+            top: 185px;
+            left: 1375px;
             overflow: hidden;
             transition: all 0.3s;
             border-radius: 100px;
@@ -46,30 +51,22 @@
             height: 27px;
             z-index: 1000;
         }
-            
+    
         #siren-svg {
-            position: fixed;
-            bottom: 400px;
-            left: 1000px;
+            position: absolute;
+            bottom: 345px;
+            left: 1600px;
             overflow: hidden;
             transition: all 0.3s;
             border-radius: 100px;
             z-index: 1000;
-    }
-
-
+        }
 
     </style>
 </head>
 <body>
-    <div class="parallax-container">
-        <div class="parallax-bg">
-            <img src="../assets/piratesgraveyard.jpg" alt="bg">
-        </div>
-        <div class="content">
-        </div>
+    <div class="container">
     </div>
-
     <div class="svg-container" id="sky-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
             <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
@@ -97,8 +94,6 @@
           </svg>
           <audio id="sirenaudio" src="../assets/siren.mp3"></audio>  
     </div>
-
-    <script src="script.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
