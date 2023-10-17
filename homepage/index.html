@@ -16,13 +16,11 @@
             object-fit: cover;
         }
 
-        @media (max-width: 768px) {
-
     #circle-svg {
         position: absolute;
         top: 450px;
         left: 570px;
-        display: hidden;
+        display: none;
         overflow: hidden;
         z-index: 10000;
         transition: all 0.3s;
@@ -41,7 +39,7 @@
 }
 
     .text {
-        position: absolute;
+        position: hidden;
         top: 50%; 
         left: 40px; 
         transform: translateY(-50%);
@@ -68,7 +66,6 @@
         display: none;
         z-index: 10000;
     }
-        }
 
     </style>
     <link rel="stylesheet" href="../assets/main.css">
@@ -83,9 +80,6 @@
 
         <a href="./interiorship.html">
         <div class="svg-container" id="circle-svg">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <circle cx="17" cy="17" r="16" stroke="#F5F5F5" stroke-width="3"/>
-            </svg> -->
             <div class="text">
                 <p>enter ship</p>
             </div>
