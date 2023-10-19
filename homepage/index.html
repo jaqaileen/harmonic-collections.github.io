@@ -80,9 +80,6 @@
     <link rel="stylesheet" href="../assets/main.css">
 </head>
 <body>
-    <div class="image-container">
-        <img src="portrait.png" id="portrait-image" alt="Portrait Image">
-    </div>
 
     <div id="video-container">
         <div class="title-container">
@@ -108,20 +105,8 @@
     </body>
 
     <script>
-        function checkOrientation() {
-        const portraitImage = document.getElementById("portrait-image");
-        const imageContainer = document.querySelector(".image-container");
+        screen.orientation.lock('landscape');
 
-        if (window.innerHeight > window.innerWidth) {
-            // Portrait mode
-            imageContainer.style.display = "block";
-        } else {
-            // Landscape mode
-            imageContainer.style.display = "none";
-        }
-    }
-    window.addEventListener("resize", checkOrientation);
-    window.addEventListener("load", checkOrientation);
 
         document.addEventListener('DOMContentLoaded', function () {
             const circleSvg = document.getElementById('circle-svg');
