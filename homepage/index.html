@@ -48,7 +48,7 @@
 }
 
     .text {
-        position: hidden;
+        position: absolute;
         top: 50%; 
         left: 40px; 
         transform: translateY(-50%);
@@ -58,10 +58,10 @@
         font-style: normal;
         font-weight: 800;
         line-height: normal;
-        z-index: 1001; 
         opacity: 0;
         pointer-events: none; 
         white-space: nowrap;
+        z-index: 10001; 
 }
 
     #circle-svg:hover .text {
