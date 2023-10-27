@@ -41,17 +41,6 @@ a {
     z-index: 10000;
 }
 
-
-.shipwreckhome {
-    margin: 0;
-    padding: 0;
-    background-image: url('./shipwreckhome.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
 .container {
     text-align: center;
     position: relative;

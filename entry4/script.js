@@ -1,12 +1,12 @@
 const imagesToFind = [
-    { src: "../assets/bluegem.png", top: '418px', left: '668px' },
-    { src: "../assets/browngem.png", top: '480px', left: '605px' },
-    { src: "../assets/lightgreengem.png", top: '310px', left: '626px' },
-    { src: "../assets/lightpinkgem.png", top: '285px', left: '776px' },
-    { src: "../assets/pinkgem.png", top: '351px', left: '898px' },
-    { src: "../assets/redgem.png", top: '590px', left: '985px' },
-    { src: "../assets/whitegem.png", top: '380px', left: '1300px' },
-    { src: "../assets/yellowgem.png", top: '460px', left: '982px' },
+    { src: "../assets/images/bluegem.png", top: '418px', left: '668px' },
+    { src: "../assets/images/browngem.png", top: '480px', left: '605px' },
+    { src: "../assets/images/lightgreengem.png", top: '310px', left: '626px' },
+    { src: "../assets/images/lightpinkgem.png", top: '285px', left: '776px' },
+    { src: "../assets/images/pinkgem.png", top: '351px', left: '898px' },
+    { src: "../assets/images/redgem.png", top: '590px', left: '985px' },
+    { src: "../assets/images/whitegem.png", top: '380px', left: '1300px' },
+    { src: "../assets/images/yellowgem.png", top: '460px', left: '982px' },
     ];
 
     

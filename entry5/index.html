@@ -4,13 +4,38 @@
     <style>
     body, html {
             margin: 0;
-            padding: 0;
+            padding: 0;   
+            background-color: #102B47;
+            margin: 0;
+            font-family: 'Quicksand', sans-serif; 
         }
+     h4 {
+          font-size: clamp(1rem, 5vw, 1.3rem);
+      }
+
+        .explore-link {
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+          align-items: center;
+          transition: all 350ms ease-in-out;
+      }
+
+      .explore-link:hover {
+          transition: all 350ms ease-in-out;
+          transform: translateX(10px);
+      }
+
+      .explore-link > h4 {
+          color: #F5F5F5;
+          font-weight: 500;
+          margin: 0;
+      }
 
         .container {
             width: 150vw;
             height: 150vh;
-            background-image: url("../assets/piratesgraveyard.jpg");
+            background-image: url("../assets/images/piratesgraveyard.jpg");
             background-size: cover; 
             background-repeat: no-repeat;
             background-position: center;
@@ -71,29 +96,36 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
             <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
           </svg>
-          <audio id="skyaudio" src="../assets/seagulls.mp3"></audio>  
+          <audio id="skyaudio" src="../assets/audios/seagulls.mp3"></audio>  
     </div>
 
     <div class="svg-container" id="ocean-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
             <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
           </svg>
-          <audio id="wavesaudio" src="../assets/waves.mp3"></audio>  
+          <audio id="wavesaudio" src="../assets/audios/waves.mp3"></audio>  
     </div>
 
     <div class="svg-container" id="boat-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
             <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
           </svg>
-          <audio id="boataudio" src="../assets/boat.mp3"></audio>  
+          <audio id="boataudio" src="../assets/audios/boat.mp3"></audio>  
     </div>
 
     <div class="svg-container" id="siren-svg">
         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
             <circle cx="13.5" cy="13.5" r="13.5" fill="#F5F5F5"/>
           </svg>
-          <audio id="sirenaudio" src="../assets/siren.mp3"></audio>  
+          <audio id="sirenaudio" src="../assets/audios/siren.mp3"></audio>  
     </div>
+
+    <a href="../entry7/index.html" style="position: absolute; bottom:5%; right:10%;  z-index: 1000;">
+      <div class="explore-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <h4>KEEP EXPLORING</h4>
+      </div>
+  </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
