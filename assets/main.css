@@ -19,6 +19,10 @@ h3 {
     font-size: clamp(1.2rem, 5vw, 1.5rem);
 }
 
+h4 {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+}
+
 p {
     font-size: clamp(1rem, 5vw, 1.2rem);
     font-weight: 300;
@@ -94,7 +98,7 @@ a {
 .explore-link {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 6px;
     align-items: center;
     transition: all 350ms ease-in-out;
 }
@@ -104,8 +108,8 @@ a {
     transform: translateX(10px);
 }
 
-.explore-link > h3 {
-    color: #90BEC5;
+.explore-link > h4 {
+    color: #F5F5F5;
     font-weight: 500;
     margin: 0;
 }
@@ -119,129 +123,7 @@ a {
     position: absolute;
 }
 
-.image-container {
-    width: 100%;
-    height: 100%;
-    background-image: url("./SeraphimShoresMap.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-}
 
-.title-container {
-    position: absolute;
-    right: 90px;
-    bottom: 5px;
-}
-
-
-.map-title {
-    color: #3E342A;
-    font-family: Quicksand;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 500;
-
-}
-
-.map-main-title {
-    color: #F5F5F5;
-    text-shadow: 0px 6px 6px rgba(245, 245, 245, 0.47);
-    font-family: Luxurious Script;
-    opacity: 35%;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    transform: translate(0, -17%);
-}
-
-.image-container > a 
-{
-    color: #F5F5F5;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Luxurious Script;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    position: absolute;
-    transition: all 300ms ease-in-out;
-}
-
-.image-container > a:hover
-{
-    scale: 1.2;
-    transition: all 300ms ease-in-out;
-    z-index: 100;
-}
-
-.parallax-container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-#sky-svg {
-    position: fixed;
-    top: 45px;
-    left: 200px;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 100px;
-    width: 27px;
-    height: 27px;
-    z-index: 1000;
-}
-
-#ocean-svg {
-    position: fixed;
-    top: 270px;
-    left: 530px;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 100px;
-    width: 27px;
-    height: 27px;
-    z-index: 1000;
-}
-
- #boat-svg {
-    position: fixed;
-    top: 165px;
-    left: 1375px;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 100px;
-    width: 27px;
-    height: 27px;
-    z-index: 1000;
-}
-    
-#siren-svg {
-    position: fixed;
-    bottom: 400px;
-    left: 1000px;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 100px;
-    z-index: 1000;
-}
-
-.parallax-bg {
-    flex: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140%;
-    transition: transform 0.5s;
-    transform-origin: left top;
-}
-
-.parallax-bg img {
-    width: 100%;
-    height: 100%;
-}
 
 .content {
     position: absolute;
