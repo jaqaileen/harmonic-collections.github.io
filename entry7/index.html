@@ -2,108 +2,54 @@
 <html>
 <head>
     <title>Scroll-Controlled Video</title>
-    <link href="../assets/main.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+                    section.vid {
+            height: 600vh;
+            position: relative;
+            }
 
-        /*container for overflow */
+            section.vid div.holder {
+            position: sticky;
+            top: 0;
+            }
 
-        /* #video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: auto;
-            height: 100vh;
-            overflow: hidden;
-        } */
-        #scroll-video {
-            position: fixed;
-            top: 0;
-            left: 0;
+            section.vid video {
             width: 100%;
-
-        }
-        #content {
-            height: 100vh;
-        }
-
-        #set-height{
-            display: block;
-        }
+            height: 100%;
+            object-fit: cover;
+            }
     </style>
 </head>
 <body>
-    <div id="set-height"></div>
-    <!-- <div id="video-container"> -->
-    <video id="scroll-video" tabindex="0" autobuffer="autobuffer" preload="preload" muted>
-        <source src="../assets/videos/bloom.mp4" type="video/mp4">
-    </video>
-    <!-- </div> -->
-    <div id="content">
-    </div>
-
+    <section class="vid">
+        <div class="holder">
+          <video src="../assets/videos/bloom.mp4" muted loop playsinline></video>
+        </div>
+    </section>
     <script>
-     let myScreenOrientation = window.screen.orientation;
-    myScreenOrientation.lock("landscape");
+
+        const section = document.querySelector('section.vid')
+        const vid = section.querySelector('video')
+
+        vid.pause()
+
+        const scroll = () => {
+        const distance = window.scrollY - section.offsetTop
+        const total = section.clientHeight - window.innerHeight
+
+        let percentage = distance / total
+        percentage = Math.max(0, percentage)
+        percentage = Math.min(percentage, 1)
+
+        if (vid.duration > 0) {
+            vid.currentTime = vid.duration * percentage * 0.5
+        }
+        }
+
+        scroll()
+        window.addEventListener('scroll', scroll)
+
     
-    console.log("test");
-        var frameNumber = 0; // start video at frame 0
-    // lower numbers = faster playback
-    playbackConst = 500; 
-    // get page height from video duration
-    setHeight = document.getElementById("set-height");
-    // select video element         
-    vid = document.getElementById('scroll-video'); 
-
-    console.log("test2");
-    // dynamically set the page height according to video length
-    vid.addEventListener('loadedmetadata', function() {
-        console.log("height set")
-        setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-    });
-
-// Use requestAnimationFrame for smooth playback
-function scrollPlay(){ 
-  var frameNumber  = window.pageYOffset/playbackConst;
-  vid.currentTime  = frameNumber;
-  window.requestAnimationFrame(scrollPlay);
-}
-
-window.requestAnimationFrame(scrollPlay);
-        // var video = document.getElementById("scroll-video");
-        // var playing = false;
-
-        // video.addEventListener('loadedmetadata', function() {
-        //     var setHeight = document.getElementById("content");
-        //     setHeight.style.height = video.duration * 100 + "vh";
-        // });
-
-        // window.addEventListener("scroll", function() {
-        //     var scrollPosition = window.scrollY;
-        //     var videoPosition = (scrollPosition / document.documentElement.scrollHeight) * video.duration;
-
-        //     if (videoPosition >= 0 && videoPosition <= video.duration) {
-        //         video.currentTime = videoPosition;
-        //     } else {
-        //         if (videoPosition < 0) {
-        //             video.currentTime = 0;
-        //         } else {
-        //             video.currentTime = video.duration;
-        //         }
-        //     }
-
-        //     if (scrollPosition > 0 && !playing) {
-        //         video.play();
-        //         playing = true;
-        //     } else if (scrollPosition <= 0 && playing) {
-        //         video.pause();
-        //         playing = false;
-        //     }
-        // });
     </script>
 </body>
 </html>
