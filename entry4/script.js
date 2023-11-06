@@ -1,3 +1,8 @@
+let myScreenOrientation = window.screen.orientation;
+myScreenOrientation.lock("landscape");
+
+console.log("screen locked")
+
 const imagesToFind = [
     { src: "../assets/images/bluegem.png", top: '418px', left: '668px' },
     { src: "../assets/images/browngem.png", top: '480px', left: '605px' },

@@ -47,6 +47,9 @@
     </div>
 
     <script>
+     let myScreenOrientation = window.screen.orientation;
+    myScreenOrientation.lock("landscape");
+    
     console.log("test");
         var frameNumber = 0; // start video at frame 0
     // lower numbers = faster playback
