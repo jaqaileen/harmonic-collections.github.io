@@ -7,9 +7,32 @@
     <style>
         body {
             background-image: url('../assets/images/gemstonegrotto.jpg');
-            background-size: cover;
+            background-size: inherit;
+            background-repeat: no-repeat;
             margin: 0;
         }
+
+        .instruction-box {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 12px;
+    background: rgba(61, 89, 76, 0.70);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 40px; 
+    left: 40px; 
+}
+
+.instruction-box h3 {
+    color: #f5f5f5;
+    /* position: absolute; */
+    /* bottom: 110px; 
+    left: 40px;  */
+}
+      
     </style>
     <link href="../assets/main.css" rel="stylesheet"> 
    
@@ -23,6 +46,7 @@
         <div class="game-box"></div>
         <div class="instruction-box">
             <h3>find these gems:</h3>
+            <div class="gem-collection"></div>
         </div>
     </div>
     <a href="../entry5/index.html" style="position: absolute; bottom:5%; right:10%;  z-index: 1000;">

@@ -14,7 +14,7 @@ const imagesToFind = [
 const foundImages = [];
 
 function displayImagesToFind() {
-    const instructionBox = document.querySelector('.instruction-box');
+    const instructionBox = document.querySelector('.gem-collection');
     const gameBox = document.querySelector('.game-box');
     
     for (const image of imagesToFind) {
@@ -29,8 +29,8 @@ function displayImagesToFind() {
         imgElement.addEventListener('click', () => {
             if (!foundImages.includes(image)) {
                 foundImages.push(image);
-                imgElement.remove();
-                imgClone.remove();
+                imgElement.style.visibility = "hidden";
+                imgClone.style.display = "none";
                 checkGameCompletion();
             }
         });
