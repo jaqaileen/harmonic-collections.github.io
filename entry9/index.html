@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/main.css" rel="stylesheet"> 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-image {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-repeat: no-repeat;
+            background-image: url('../assets/images/oceanunder.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .responsive-image {
+            position: absolute;
+            width: 15%;
+            top: 50%;
+            left: 50%;
+            opacity: 80%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+
+        .responsive-image:hover {
+            transform: translate(-50%, -55%); 
+        }
+
+        .message-image {
+            display: none;
+            position: absolute;
+            width: 30%; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .message-text {
+            color: #3E342A;
+            font-family: Luxurious Script;
+            cursor: pointer;
+            font-size: 240%;
+            font-style: normal;
+            font-weight: 500;
+            position: absolute;
+            text-align: center;
+            width: 24%;
+            top: 22%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background-image"></div>
+        <img src="../assets/images/bottle.png" alt="Bottle" class="responsive-image" id="bottleImage">
+        <img src="../assets/images/message.png" alt="Message" class="message-image" id="messageImage">
+        <div class="message-text" id="messageText">
+            Emerging from the enchanted depths, you've unraveled the mysteries beneath the waves. As the currents carry you back to the surface, remember: the greatest adventures are the ones that linger in the heart, even when the sea is far behind. Until the next call of curiosity, farewell.
+        </div>
+    </div>
+    <a href="../homepage/book.html" style="position: absolute; bottom:5%; right:10%;  z-index: 1000;">
+        <div class="explore-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <h4>GO HOME</h4>
+        </div>
+    </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var bottleImage = document.getElementById('bottleImage');
+            var messageImage = document.getElementById('messageImage');
+            var messageText = document.getElementById('messageText');
+
+            bottleImage.addEventListener('click', function() {
+                messageImage.style.display = (messageImage.style.display === 'block') ? 'none': 'block';
+                messageText.style.display = (messageText.style.display === 'block') ? 'none': 'block';
+            });
+        });
+    </script>
+</body>
+</html>
