@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="../assets/main.css" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            margin: 0;
+            overflow: hidden;
             background-image: url('../assets/images/school.jpeg');
             background-size: cover;
-            
+        }
+
+        #gif-container {
+            position: absolute;
+            pointer-events: none;
         }
     </style>
+    <link href="../assets/main.css" rel="stylesheet">
+    <title>GIF on Click</title>
 </head>
 <body>
-    <a href="../entry9/index.html" style="position: absolute; bottom:5%; right:10%;  z-index: 1000;">
+    <div id="gif-container"></div>
+
+    <a href="../entry9/index.html" style="position: absolute; bottom: 5%; right: 10%; z-index: 1000;">
         <div class="explore-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+            </svg>
             <h4>KEEP EXPLORING</h4>
         </div>
     </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('click', function (event) {
+                // Create a new image element for the GIF
+                var gif = document.createElement('img');
+                gif.src = '../assets/images/schoolfish.gif'; // Assuming the GIF is in the same directory as this HTML file
+
+                // Set the position of the GIF container
+                var container = document.getElementById('gif-container');
+                container.style.left = event.clientX + 'px';
+                container.style.top = event.clientY + 'px';
+
+                // Append the GIF to the container
+                container.innerHTML = '';
+                container.appendChild(gif);
+            });
+        });
+    </script>
 </body>
 </html>
