@@ -1,6 +1,5 @@
 let myScreenOrientation = window.screen.orientation;
 myScreenOrientation.lock("landscape");
-
 console.log("screen locked")
 
 const imagesToFind = [
