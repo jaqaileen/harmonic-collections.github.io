@@ -1,61 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="../assets/main.css" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-                    section.vid {
-            height: 600vh;
-            position: relative;
-            }
+        body {
+            margin: 0;
+            overflow: hidden; /* Hide scroll bars */
+        }
 
-            section.vid div.holder {
-            position: sticky;
-            top: 0;
-            }
-
-            section.vid video {
+        video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            }
+            object-fit: cover; /* Ensure the video covers the entire container */
+            cursor: pointer; /* Show pointer cursor when hovering over the video */
+        }
     </style>
+    <title>Responsive Fullscreen Video</title>
 </head>
 <body>
-    <section class="vid">
-        <div class="holder">
-          <video src="../assets/videos/bloomvid.m4v" muted loop playsinline></video>
-        </div>
-    </section>
-    <a href="../entry8/index.html" style="position: absolute; bottom:5%; right:10%;  z-index: 1000;">
-        <div class="explore-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            <h4>KEEP EXPLORING</h4>
-        </div>
-    </a>
-    <script>
 
-        const section = document.querySelector('section.vid')
-        const vid = section.querySelector('video')
+<video id="myVideo" controls>
+    <source src="../assets/videos/bloomvid.mp4" type="video/mp4">
+</video>
 
-        vid.pause()
+<script>
+    // Get the video element
+    var video = document.getElementById("myVideo");
 
-        const scroll = () => {
-        const distance = window.scrollY - section.offsetTop
-        const total = section.clientHeight - window.innerHeight
-
-        let percentage = distance / total
-        percentage = Math.max(0, percentage)
-        percentage = Math.min(percentage, 1)
-
-        if (vid.duration > 0) {
-            vid.currentTime = vid.duration * percentage * 0.5
+    // Make the video full screen when clicked
+    video.addEventListener("click", function () {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
         }
+    });
+
+    // Toggle full screen on double click
+    video.addEventListener("dblclick", function () {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
         }
+    });
+</script>
 
-        scroll()
-        window.addEventListener('scroll', scroll)
-
-    
-    </script>
 </body>
 </html>
