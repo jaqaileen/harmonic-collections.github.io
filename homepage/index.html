@@ -25,7 +25,7 @@
             object-fit: cover;
         }
 
-    /* #circle-svg {
+        #circle-svg {
         position: absolute;
         top: 450px;
         left: 570px;
@@ -48,16 +48,16 @@
 }
 
     .text {
+        position: hidden;
         position: absolute;
         top: 50%; 
         left: 40px; 
         transform: translateY(-50%);
-        color: #F5F5F5;
-        font-family: Quicksand;
-        font-size: 20px;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
+        z-index: 1001; 
+        color: #f5f5f5;
         opacity: 0;
         pointer-events: none; 
         white-space: nowrap;
@@ -70,53 +70,10 @@
 
     #path-svg {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 460px;
+        left: 578px;
         display: none;
         z-index: 10000;
-        /* top: ;
-        left:; */
-    /* } */ 
-
-    #circle-svg:hover {
-        width: 146px;
-        height: 34px; 
-        border-radius: 100px;
-        border: 2px solid #F5F5F5;
-    }
-
-    .text {
-        position: absolute;
-        top: 50%; 
-        left: 40px; 
-        transform: translateY(-50%);
-        color: #F5F5F5;
-        font-family: Quicksand;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: normal;
-        opacity: 0;
-        pointer-events: none; 
-        white-space: nowrap;
-        z-index: 10001; 
-    }
-
-    #circle-svg:hover .text {
-    opacity: 1; 
-    }
-
-    #path-svg {
-        position: absolute;
-        top: 470px;
-        left: 538px;
-        z-index: 10000;
-    }
-
-    .test {
-        position: absolute;
-        top: 50vh;
-        left: 50vw;
     }
 
     </style>
